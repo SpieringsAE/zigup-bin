@@ -1,15 +1,17 @@
 pkgbase = zigup-bin
 	pkgdesc = Download and manage zig compilers
-	pkgver = v2023_07_27
+	pkgver = v2024_03_13
 	pkgrel = 1
 	url = https://github.com/marler8997/zigup
 	arch = x86_64
-	license = unknown
+	license = MIT-0
 	provides = zigup
 	provides = zig
 	conflicts = zigup
 	conflicts = zig
-	source = https://github.com/marler8997/zigup/releases/download/v2023_07_27/zigup.ubuntu-latest-x86_64.zip
-	sha256sums = 6e3d4111a5feafedd4770ac819501f42b6fbe80df6cfc6558aaa73c8907037d5
+	source = https://github.com/marler8997/zigup/releases/download/v2024_03_13/zigup.ubuntu-latest-x86_64.zip
+	source = https://github.com/marler8997/zigup/archive/refs/tags/v2024_03_13.tar.gz
+	sha256sums = 8b05403e5b58ecd6a221251a884513e3f035d67e122bf11594633da6579a7133
+	sha256sums = 219a3e0fb391e85578033445e6dd57699b71da97cea56a4db1995017324113a3
 
 pkgname = zigup-bin
