@@ -2,7 +2,7 @@
 pkgname=zigup-bin
 _pkgname=zigup
 pkgver=v2024_05_05
-pkgrel=1
+pkgrel=2
 pkgdesc="Download and manage zig compilers"
 arch=('x86_64' 'aarch64' 'armv7h')
 url="https://github.com/marler8997/zigup"
@@ -20,5 +20,8 @@ sha256sums_armv7h=('d642e99e0e7657c4ceaa9cfb179a94dadfade25666e62b819f1a50720456
 
 package() {
     install -Dm 0755 $_pkgname $pkgdir/usr/bin/$_pkgname
-    install -Dm 0644 $_pkgname-$(echo $pkgver | sed 's/^v//')/README.md $pkgdir/usr/share/doc/$pkgname/README.md
+
+    cd "$_pkgname-$(echo $pkgver | sed 's/^v//')"
+    install -Dm 0644 README.md $pkgdir/usr/share/doc/$pkgname/README.md
+    install -Dm 0644 LICENSE $pkgdir/usr/share/licenses/$pkgname/LICENSE
 }
