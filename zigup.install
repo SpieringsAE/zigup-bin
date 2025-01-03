@@ -1,0 +1,17 @@
+print_alias_explanation() {
+	echo ""
+	echo ""
+	echo "The zigup tool will try to change your system global zig compiler by default."
+	echo "You likely don't have permissions set up for this. It is more convenient to manage versions in your home directory."
+	echo "You can set an alias or script to pass the --path-link option with a writeable directory on your \$PATH to zigup to make this the default behaviour."
+	echo ""
+	echo ""
+}
+
+post_install() {
+	print_alias_explanation
+}
+
+post_upgrade() {
+	print_alias_explanation
+}

@@ -2,13 +2,14 @@
 pkgname=zigup-bin
 _pkgname=zigup
 pkgver=v2025_01_02
-pkgrel=1
+pkgrel=2
 pkgdesc="Download and manage zig compilers"
 arch=('x86_64' 'aarch64' 'armv7h')
 url="https://github.com/marler8997/zigup"
 license=('MIT-0')
 provides=('zigup' 'zig')
 conflicts=('zigup' 'zig')
+install="$_pkgname.install"
 source=("$url/archive/refs/tags/$pkgver.tar.gz")
 source_x86_64=("$url/releases/download/$pkgver/zigup-x86_64-linux.tar.gz")
 source_aarch64=("$url/releases/download/$pkgver/zigup-aarch64-linux.tar.gz")
